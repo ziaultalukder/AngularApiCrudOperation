@@ -1,0 +1,21 @@
+<table class="table table-bordered table-stripped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let product of List">
+    <tr>
+      <td>{{product.Name}}</td>
+      <td>{{product.Price}}</td>
+      <td>{{product.Description}}</td>
+      <td>
+        <a href="{{product.Id}}" class="btn btn-primary btn-sm">Edit</a> |
+        <a href="{{product.Id}}" class="btn btn-danger btn-sm">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

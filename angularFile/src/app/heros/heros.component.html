@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-6">
+        <ul *ngFor="let Hiru of heroes" (click)="onSelect(Hiru)">
+          <a routerLink="/details/{{Hiru.Id}}">
+            <li>{{Hiru.Id}}</li>
+            <li>{{Hiru.Name}}</li>
+            <li>{{Hiru.Phone}}</li>
+            <li>{{Hiru.Age}}</li>
+            <li>{{Hiru.Address}}</li>
+          </a>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <!-- <app-hero-details [hero]="selectedHero"></app-hero-details>         -->
+      </div>
+</div>
+
+

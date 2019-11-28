@@ -1,0 +1,66 @@
+<!-- <form #productForm="ngForm" (ngSubmit)="SaveProduct(productForm)">
+
+<div class="row">
+  <div class="col-md-12">    
+
+    <input type="hidden" name="Id" id="Id" (ngModel)="service.productModel.Id">
+
+    <div class="form-group">
+      <label>Product Name</label>
+      <input type="text" name="Name" id="Name" #Name="ngModel" [(ngModel)]="service.productModel.Name" 
+      class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="" class="ontrol-label">Price</label>
+      <input type="number" name="Price" id="Price" #Price="ngModel" [(ngModel)]="service.productModel.Price"
+      class="form-control">
+
+
+    </div>
+
+    <div class="form-group">
+      <label for="" class="ontrol-label">Description</label>
+      <textarea name="Description" id="Description" cols="30" rows="5" #Description="ngModel" [(ngModel)]="service.productModel.Description"
+      class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" value="Save" class="btn btn-primary">    
+    </div>
+
+  </div>
+</div>
+</form> -->
+
+
+<form class="emp-form" #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+
+    <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="objemp.Id">
+    
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input class="form-control" name="Name" #FirstName="ngModel" [(ngModel)]="objemp.Name"
+          placeholder="First Name" required>
+        <div class="validation-error" *ngIf="FirstName.invalid && FirstName.touched">This Field is Required.</div>
+      </div>
+      <div class="form-group col-md-6">
+        <input type="number" class="form-control" name="Price" #LastName="ngModel" [(ngModel)]="objemp.Price" placeholder="Last Name"
+          required>
+        <div class="validation-error" *ngIf="LastName.invalid && LastName.touched">This Field is Required.</div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input class="form-control" name="Description" #EmpCode="ngModel" [(ngModel)]="objemp.Description" placeholder="Emp Code">
+      </div>      
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <button type="submit" class="btn btn-lg btn-block btn-info">
+          <i class="fa fa-floppy-o"></i> Submit</button>
+      </div>
+    </div>
+  </form>
+
+  {{productForm.value | json}}

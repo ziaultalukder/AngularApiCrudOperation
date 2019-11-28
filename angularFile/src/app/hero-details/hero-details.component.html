@@ -1,0 +1,12 @@
+<p>
+  hero-details works!
+</p>
+
+<div *ngIf="hero">
+    <span>Id:{{hero.Id}}</span><br>
+    <span>Name : {{hero.Name | uppercase}}</span><br>
+    <span>Phone: {{hero.Phone}}</span><br>
+    <span>Age: {{hero.Age}}</span><br>
+    <span>Address: {{hero.Address}}</span><br>
+    <input [(ngModel)]="hero.Name" placeholder="Name">
+</div>
